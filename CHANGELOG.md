@@ -1,3 +1,10 @@
+# [4.17.0](https://github.com/E85Addicts/revanced-patches/compare/v4.16.0...v4.17.0) (2024-10-07)
+
+
+### Features
+
+* **YouTube:** Support versions 19.25 and 19.34 ([f74a04d](https://github.com/E85Addicts/revanced-patches/commit/f74a04d0b15d57aa27e126571eb8a98733e7540a))
+
 # [4.16.0](https://github.com/ReVanced/revanced-patches/compare/v4.15.0...v4.16.0) (2024-09-30)
 
 
