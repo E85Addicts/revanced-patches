@@ -1,6 +1,7 @@
 name: Release
 
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches:
@@ -10,6 +11,9 @@ on:
 jobs:
   release:
     name: Release
+    permissions:
+      contents: write
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,5 +50,5 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.REPOSITORY_PUSH_ACCESS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm exec semantic-release
