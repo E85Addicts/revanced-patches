@@ -1,3 +1,10 @@
+# [4.19.0](https://github.com/E85Addicts/revanced-patches/compare/v4.18.0...v4.19.0) (2024-10-17)
+
+
+### Features
+
+* **Instagram:** Added few patches ([bdc3d29](https://github.com/E85Addicts/revanced-patches/commit/bdc3d2975a1f74f87a11553df8cb586b4d66420c))
+
 # [4.18.0](https://github.com/E85Addicts/revanced-patches/compare/v4.17.0...v4.18.0) (2024-10-16)
 
 
