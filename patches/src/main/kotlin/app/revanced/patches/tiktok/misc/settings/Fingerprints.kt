@@ -1,18 +1,25 @@
 package app.revanced.patches.tiktok.misc.settings
 
 import app.revanced.patcher.fingerprint
-import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
-import com.android.tools.smali.dexlib2.iface.reference.TypeReference
-
-internal val addSettingsEntryFingerprint = fingerprint {
-    strings("privacy_center")
-}
 
 internal val adPersonalizationActivityOnCreateFingerprint = fingerprint {
     custom { method, classDef ->
         classDef.endsWith("/AdPersonalizationActivity;") &&
             method.name == "onCreate"
+    }
+}
+
+internal val settingsStatusLoadFingerprint = fingerprint {
+    custom { method, classDef ->
+        classDef.endsWith("Lapp/revanced/extension/tiktok/settings/SettingsStatus;") &&
+                method.name == "load"
+    }
+}
+
+internal val addSettingsEntryFingerprint = fingerprint {
+    custom { method, classDef ->
+        classDef.endsWith("/SettingNewVersionFragment;") &&
+                method.name == "initUnitManger"
     }
 }
 
@@ -25,11 +32,4 @@ internal val settingsEntryInfoFingerprint = fingerprint {
         "ExposeItem(title=",
         ", icon=",
     )
-}
-
-internal val settingsStatusLoadFingerprint = fingerprint {
-    custom { method, classDef ->
-        classDef.endsWith("Lapp/revanced/extension/tiktok/settings/SettingsStatus;") &&
-            method.name == "load"
-    }
 }
