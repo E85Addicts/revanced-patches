@@ -397,6 +397,20 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="revanced_custom_filter_strings_summary">Daftar untaian pembuat jalur komponen untuk disaring dipisahkan oleh baris baru</string>
   <string name="revanced_custom_filter_toast_invalid_syntax">Penyaring khusus tidak sah: %s</string>
+  <string name="revanced_hide_view_count_title">Sembunyikan jumlah penayangan</string>
+  <string name="revanced_hide_view_count_summary_on">Jumlah penayangan disembunyikan di feed dan hasil pencarian</string>
+  <string name="revanced_hide_view_count_summary_off">Jumlah penayangan ditampilkan di feed dan hasil pencarian</string>
+  <!-- Translations should lanaguge similar to revanced_hide_upload_time_user_dialog_message -->
+  <string name="revanced_hide_view_count_user_dialog_message">"Keterbatasan:
+• Rak Shorts, halaman channel, dan hasil pencarian mungkin masih menampilkan jumlah penayangan
+• Fitur ini tidak berfungsi dengan faktor bentuk otomotif"</string>
+  <string name="revanced_hide_upload_time_title">Sembunyikan waktu unggah</string>
+  <string name="revanced_hide_upload_time_summary_on">Waktu unggah disembunyikan di feed dan hasil penelusuran</string>
+  <string name="revanced_hide_upload_time_summary_off">Waktu unggah ditampilkan di feed dan hasil penelusuran</string>
+  <!-- Translations should lanaguge similar to revanced_hide_view_count_user_dialog_message -->
+  <string name="revanced_hide_upload_time_user_dialog_message">"Keterbatasan:
+• Rak Shorts, halaman channel, dan hasil penelusuran mungkin masih menampilkan waktu unggah
+• Fitur ini tidak berfungsi dengan faktor bentuk otomotif"</string>
   <string name="revanced_hide_keyword_content_screen_title">Sembunyikan kata kunci konten</string>
   <string name="revanced_hide_keyword_content_screen_summary">Sembunyikan pencarian dan feed video menggunakan penyaring kata kunci</string>
   <string name="revanced_hide_keyword_content_home_title">Sembunyikan video beranda dengan kata kunci</string>
