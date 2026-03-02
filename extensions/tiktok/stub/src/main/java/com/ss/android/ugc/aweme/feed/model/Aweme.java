@@ -1,40 +1,57 @@
 package com.ss.android.ugc.aweme.feed.model;
 
-//Dummy class
+import com.ss.android.ugc.aweme.commerce.model.ShopAdStruct;
+import com.ss.android.ugc.aweme.commerce.model.SimplePromotion;
+import com.ss.android.ugc.aweme.search.ecom.data.Product;
+import com.ss.android.ugc.aweme.commerce.AwemeCommerceStruct;
+import java.util.List;
+
 public class Aweme {
-    public boolean isAd() {
-        throw new UnsupportedOperationException("Stub");
-    }
+    
+    // Internal Feed Type Identifiers
+    public int awemeType; 
+    public int adLinkType;
+    
+    // Live Stream Data
+    public RoomStruct room;
+    
+    // Monetization & Sponsored Traffic
+    public boolean isAd;
+    public boolean isSoftAd;
+    public AwemeRawAd awemeRawAd;
+    public AwemeCommerceStruct mCommerceVideoAuthInfo;
 
-    public boolean isLive() {
-        throw new UnsupportedOperationException("Stub");
-    }
+    // E-Commerce / Shop Data
+    public List<Object> productsInfo;
+    public List<Object> simplePromotions;
+    public ShopAdStruct shopAdStruct;
+    
+    // Non-Video Feed Injections (Fake Awemes)
+    public boolean isReferralFakeAweme;
+    public boolean isRecBigCardFakeAweme;
 
-    public boolean isLiveReplay() {
-        throw new UnsupportedOperationException("Stub");
-    }
+    // Social & Follow Recommendations
+    public int recommendCardType;
+    public List<Object> familiarRecommendUser;
 
-    public boolean isWithPromotionalMusic() {
-        throw new UnsupportedOperationException("Stub");
-    }
+    // Content Engagement Statistics
+    public AwemeStatistics statistics;
 
-    public boolean getIsTikTokStory() {
-        throw new UnsupportedOperationException("Stub");
-    }
+    // Story Metadata
+    public boolean isTikTokStory;
 
-    public boolean isImage() {
-        throw new UnsupportedOperationException("Stub");
-    }
-
-    public boolean isPhotoMode() {
-        throw new UnsupportedOperationException("Stub");
-    }
-
-    public AwemeStatistics getStatistics() {
-        throw new UnsupportedOperationException("Stub");
-    }
-
-    public String getShareUrl() {
-        throw new UnsupportedOperationException("Stub");
-    }
+    public int getAwemeType() { throw new UnsupportedOperationException("Stub"); }
+    public RoomStruct getRoom() { throw new UnsupportedOperationException("Stub"); }
+    public boolean isAd() { throw new UnsupportedOperationException("Stub"); }
+    public boolean isSoftAd() { throw new UnsupportedOperationException("Stub"); }
+    public AwemeStatistics getStatistics() { throw new UnsupportedOperationException("Stub"); }
+    
+    // Stub methods for legacy compatibility
+    public String getAid() { throw new UnsupportedOperationException("Stub"); }
+    public boolean isLiveReplay() { throw new UnsupportedOperationException("Stub"); }
+    public long getLiveId() { throw new UnsupportedOperationException("Stub"); }
+    public String getLiveType() { throw new UnsupportedOperationException("Stub"); }
+    public boolean isWithPromotionalMusic() { throw new UnsupportedOperationException("Stub"); }
+    public String getShareUrl() { throw new UnsupportedOperationException("Stub"); }
+    public List getImageInfos() { throw new UnsupportedOperationException("Stub"); }
 }

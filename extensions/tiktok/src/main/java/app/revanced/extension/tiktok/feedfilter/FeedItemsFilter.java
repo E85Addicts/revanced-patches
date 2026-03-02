@@ -8,31 +8,41 @@ import java.util.Iterator;
 import java.util.List;
 
 public final class FeedItemsFilter {
-    private static final List<IFilter> FILTERS = List.of(
-            new AdsFilter(),
-            new LiveFilter(),
-            new StoryFilter(),
-            new ImageVideoFilter(),
-            new ViewCountFilter(),
-            new LikeCountFilter(),
-            new ShopFilter()
-    );
+
+    private static final IFilter[] FILTERS = new IFilter[] {
+        new AdsFilter(),
+        new LiveFilter(),
+        new ShopFilter(),
+        new StoryFilter(),
+        new ImageVideoFilter(),
+        new BloatFilter()
+    };
 
     public static void filter(FeedItemList feedItemList) {
+        if (feedItemList == null || feedItemList.items == null) return;
         filterFeedList(feedItemList.items, item -> item);
     }
 
     public static void filter(FollowFeedList followFeedList) {
+        if (followFeedList == null || followFeedList.mItems == null) return;
         filterFeedList(followFeedList.mItems, feed -> (feed != null) ? feed.aweme : null);
     }
 
-    private static <T> void filterFeedList(List<T> list, AwemeExtractor<T> extractor) {
-        // Could be simplified with removeIf() but requires Android 7.0+ while TikTok supports 4.0+.
+    private static <T> void filterFeedList(
+            List<T> list,
+            AwemeExtractor<T> extractor
+    ) {
+        if (list == null) return;
+
         Iterator<T> iterator = list.iterator();
+
         while (iterator.hasNext()) {
             T container = iterator.next();
             Aweme item = extractor.extract(container);
-            if (item != null && shouldFilter(item)) {
+
+            if (item == null) continue;
+
+            if (shouldFilter(item)) {
                 iterator.remove();
             }
         }
